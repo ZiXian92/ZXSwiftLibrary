@@ -9,6 +9,23 @@ This is a library consisting of commonly used data structures, as well as other 
 3. Add the library as an embedded binary in your project settings.  
  
 # API Documentation
+## Queue<T>
+A first-in-first-out linear data structure.
+### Properties
+| Return Type | Property Name |
+|-------------|---------------|
+| Bool | isEmpty{ get } |
+| Int | count{ get } |
+
+### Methods
+| Return Type | Method Signature | Description |
+|-------------|------------------|-------------|
+| Void | clear() | Empties the queue. |
+| Void | dequeue() | Dequeues the first element in the queue. |
+| Void | enqueue(elem: T) | Enqueus the given element. |
+| T? | peek() | Gets the first element in the queue. |
+| [T] | toArray() | Represents the queue as an array. |
+
 ## OrderedSet<T: Comparable>
 An ordered collection of unique comparable elements. Implemented as a balanced Binary Search Tree.  
 ### Properties
