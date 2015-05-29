@@ -4,7 +4,7 @@ Data Structures and Miscellaneous Library Code for Swift
 This is a library consisting of commonly used data structures, as well as other utility classes which I have found useful after using it in my projects.
 
 ## How to Use
-1. Download the **.framework** binary into your project folder(Choose the appropriate version for your target build).
+1. Download the **.framework** binary(to be made available in the coming days) into your project folder(Choose the appropriate version for your target build).
 2. Add the binary to your Xcode project.
 3. Add the library as an embedded binary in your project settings.  
  
