@@ -10,14 +10,14 @@ This is a library consisting of commonly used data structures, as well as other 
  
 # API Documentation
 ## OrderedSet<T: Comparable>
-An ordered collection of comparable elements. Implemented as a balanced Binary Search Tree.  
+An ordered collection of unique comparable elements. Implemented as a balanced Binary Search Tree.  
 ### Properties
 | Return Type | Property Name |
 |-------------|---------------|
-| Int | size |
-| Bool | isEmpty |
-| T | smallestElement |
-| T | largestElement |
+| Bool | isEmpty{ get } |
+| T? | largestElement{ get } |
+| Int | size{ get } |
+| T? | smallestElement{ get } |
 
 ### Methods
 | Return Type | Method Signature | Description |
@@ -29,3 +29,28 @@ An ordered collection of comparable elements. Implemented as a balanced Binary S
 | T? | lowerBound(elem: T) | Finds the smallest element that is not less than the given element. |
 | [T] | toSortedArray() | Presents this set as a sorted array. |
 | T? | upperBound(elem: T) | Finds the smallest element that is greater than the given element. |
+
+## OrderedMap<K: Comparable, V>
+An ordered collection of key-value pairs, where keys are unique. Implemented as a balanced Binary Search Tree.  
+### Properties
+| Return Type | Property Name |
+|-------------|---------------|
+| Bool | isEmpty{ get } |
+| K? | largestKey{ get } |
+| Int | size{ get } |
+| K? | smallestKey{ get } |
+| V? | subscript(key: K){ get set } |
+| V? | valueForLargestKey{ get } |
+| V? | valueForSmallestKey{ get } |
+
+### Methods
+| Return Type | Method Signature | Description |
+|-------------|------------------|-------------|
+| Void | clear() | Removes all mappings. |
+| Bool | containsKey(key: K) | Checks if a mapping exists for the given key. |
+| Void | erase(key: K) | Removes mapping for the given key. |
+| Void | insertValueForKey(key: K, value: V) | Maps the given value to the given key. |
+| K? | lowerBoundOfKey(key: K) | Gets the smallest key that is not less than the given key. |
+| [(K, V)] | toSortedArray() | Presents this map as a sorted array of key-value pairs. |
+| K? | upperBoundOfKey(key: K) | Gets the smallest key that is greater than the given key. |
+| V? | valueForKey(key: K) | Gets the value mapped to the given key. |
