@@ -9,7 +9,7 @@ This is a library consisting of commonly used data structures, as well as other 
 3. Add the library as an embedded binary in your project settings.  
  
 # API Documentation
-## Queue<T>
+## Queue&lt;T&gt;
 A first-in-first-out linear data structure.
 ### Properties
 | Return Type | Property Name |
@@ -26,7 +26,7 @@ A first-in-first-out linear data structure.
 | T? | peek() | Gets the first element in the queue. |
 | [T] | toArray() | Represents the queue as an array. |
 
-## OrderedSet<T: Comparable>
+## OrderedSet&lt;T: Comparable&gt;
 An ordered collection of unique comparable elements. Implemented as a balanced Binary Search Tree.  
 ### Properties
 | Return Type | Property Name |
@@ -47,7 +47,7 @@ An ordered collection of unique comparable elements. Implemented as a balanced B
 | [T] | toSortedArray() | Presents this set as a sorted array. |
 | T? | upperBound(elem: T) | Finds the smallest element that is greater than the given element. |
 
-## OrderedMap<K: Comparable, V>
+## OrderedMap&lt;K: Comparable, V&gt;
 An ordered collection of key-value pairs, where keys are unique. Implemented as a balanced Binary Search Tree.  
 ### Properties
 | Return Type | Property Name |
