@@ -8,6 +8,9 @@ This is a library consisting of commonly used data structures, as well as other 
 2. Add the binary to your Xcode project.
 3. Add the library as an embedded binary in your project settings.  
  
+## Contibuting to the project
+Found this library useful or just want to make the library even better? Start by forking the repository and sending in pull requests for existing issues. If you would like to become a core developer for this project, feel free to contact me to request for inclusion as a collaborator.
+ 
 # API Documentation
 ## Queue&lt;T&gt;
 A first-in-first-out linear data structure.
