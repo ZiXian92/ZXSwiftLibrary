@@ -14,8 +14,8 @@ A first-in-first-out linear data structure.
 ### Properties
 | Return Type | Property Name |
 |-------------|---------------|
-| Bool | isEmpty{ get } |
 | Int | count{ get } |
+| Bool | isEmpty{ get } |
 
 ### Methods
 | Return Type | Method Signature | Description |
@@ -25,6 +25,23 @@ A first-in-first-out linear data structure.
 | Void | enqueue(elem: T) | Enqueus the given element. |
 | T? | peek() | Gets the first element in the queue. |
 | [T] | toArray() | Represents the queue as an array. |
+
+## Stack&lt;T&gt;
+A last-in-first-out linear data structure.
+### Properties
+| Return Type | Property Name |
+|-------------|---------------|
+| Int | count{ get } |
+| Bool | isEmpty{ get } |
+
+### Methods
+| Return Type | Method Signature | Description |
+|-------------|------------------|-------------|
+| Void | clear() | Empties the stack. |
+| T? | peek() | Gets the top element of the stack. |
+| Void | pop() | Removes the top element of the stack. |
+| Void | push(elem: T) | Adds the given element to the top of the stack. |
+| [T] | toArray() | Represents the stack as an array from top to bottom. |
 
 ## OrderedSet&lt;T: Comparable&gt;
 An ordered collection of unique comparable elements. Implemented as a balanced Binary Search Tree.  
