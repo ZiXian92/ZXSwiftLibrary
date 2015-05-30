@@ -88,3 +88,31 @@ An ordered collection of key-value pairs, where keys are unique. Implemented as 
 | [(K, V)] | toSortedArray() | Presents this map as a sorted array of key-value pairs. |
 | K? | upperBoundOfKey(key: K) | Gets the smallest key that is greater than the given key. |
 | V? | valueForKey(key: K) | Gets the value mapped to the given key. |
+
+## ResourceManager
+A component that provides reference counting mechanism for file resources in the app's Document directory.
+Resources are identified by the path relative to the directory path passed to the initializer, with path extensions.
+Initializes reference count to 1 for newly-added resources.
+Automatically deletes a file resource if reference count drops to 0.
+When adding a new resource with given base name, if it conflicts with an existing resource, a number will be appended to the base name to make the resource name unique. Thus, the method returns the final name used for the resource.
+
+### Enum Types
+| Type | Values |
+|------|--------|
+| ImageType | { JPG, PNG } |
+| ResourceType | { All, Image, Text } |
+
+### Initializer(s)
+| Signature | Description |
+|-----------|-------------|
+| init(directory: String) | Creates a new resource manager that manages the specified directory. |
+
+### Methods
+| Return Type | Method Signature | Description |
+|-------------|------------------|-------------|
+| Int | referenceCountForResource(resourceName: String) | Gets the reference count for the specified resource. |
+| Void | releaseResource(resourceName: String) | Releases reference to the specified resource. |
+| [String] | resourceOfType(type: ResourceType) | Gets the list of resources of the given type. |
+| Void | retainResource(resourceName: String) | Adds a reference to the specified existing resource. |
+| String | retainResource(baseName: String, text: String) | Adds a new text file resource using the given base name. |
+| String | retainResource(baseName: String, image: UIImage, imageType: ImageType) | Adds a new image resource using the given base name. |
