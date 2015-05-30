@@ -15,9 +15,11 @@ import XCTest
 
 class ResourceManagerTests: XCTestCase {
     
+    // 1 instance of runtime error is here
     func testAddAndRetainResource() {
         let manager = ResourceManager(directory: "sharedResource")
-        println(NSBundle.mainBundle().pathForResource("linuxpenguin", ofType: ".jpg"))
+        
+        // Here the path for resource is null
         let imageFile = UIImage(named: NSBundle.mainBundle().pathForResource("linuxpenguin", ofType: ".jpg")!)!
         let text = "Hello world"
         
